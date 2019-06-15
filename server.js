@@ -9,7 +9,7 @@ var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
 
 // Our scraping tools
-var request = require("request");
+var request = require("request"); 
 var cheerio = require("cheerio");
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
@@ -36,16 +36,6 @@ app.use(express.static("public"));
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
-
-// Show any mongoose errors
-db.on("error", function(error) {
-	console.log("Mongoose Error: ", error);
-});
-
-// Once logged in to the db through mongoose, log a success message
-db.once("open", function() {
-	console.log("Mongoose connection successful.");
-});
 
 // Routes
 // A GET request to scrape the echojs website
