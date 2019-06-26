@@ -8,4 +8,10 @@ express-handlebars
 mongoose
 cheerio
 axios
-((https://hachir-se.herokuapp.com/))
+((https://hachir-se.herokuapp.c
+
+*Other - Links
+
+MongoDB Documentation
+Mongoose Documentation
+Cheerio Documentation
